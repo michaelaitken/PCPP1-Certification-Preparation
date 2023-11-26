@@ -55,3 +55,4 @@ try:
     my_dict.update({'dummy_account': 100})
 except IBANValidationError:
     print('IBANDict has protected your dictionary against incorrect data insertion')
+    
