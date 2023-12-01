@@ -36,14 +36,9 @@ class Todo:
         while True:
             valid_name = input(displayed_message).strip()
             
-            name_exists = False
-            for row in self.c.execute('SELECT * FROM tasks'):
-                if row[1] == valid_name:
-                    name_exists = True
-            
             if valid_name == '':
                 print("Task name cannot be blank.")
-            elif name_exists:
+            elif self.find_task(valid_name) is not None:
                 print("Task already exists.")
             else:
                 break
@@ -63,7 +58,6 @@ class Todo:
                 print("Priority must be a number.")
         
         return valid_priority
-            
     
     def add_task(self):
         """Add a new task to the database"""
