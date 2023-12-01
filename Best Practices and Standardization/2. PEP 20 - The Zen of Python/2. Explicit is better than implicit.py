@@ -1,11 +1,11 @@
 
 # INCORRECT / NOT RECOMMENDED
-from fruit import *
+# from fruit import *
 
-apples(2, 3.45)
+# apples(2, 3.45)
 
 
-# CORRECT / RECOMMENDED
-from fruit import apples, bananas
+# # CORRECT / RECOMMENDED
+# from fruit import apples, bananas
 
-apples(quantity=2, price=3.45)
+# apples(quantity=2, price=3.45)
